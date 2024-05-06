@@ -1,0 +1,18 @@
+# Hyper-parameters
+	EPOCHS = 5
+	Batch size = 1
+
+# Carpet class for epochs = 5
+Version, Image AUC-ROC, Pixel AUC-ROC, Pixel-AP, Pixel-AUPRO 
+1, 58.10, 89.9, 31.90, 59.6
+2, 70.20, 92.5, 35.10, 76.4
+3, 55.50, 86.50, 18.7, 59.0
+4, 39.4, 79.2, 6.9, 29.1
+
+
+
+# Carpet class for epochs = 50
+
+
+
+
