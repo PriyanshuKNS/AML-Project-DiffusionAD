@@ -22,4 +22,4 @@ Here, version_number is one of {1,2,3,4}. We have tried 4 variation of norm-guid
 
 The files of interest and the changes made in them are listed below : 
 1. **models/DDPM.py** : The portion from line 388 to line 522 has been written by us. This portion deals with the different variations of One-step denoising process with Norm guidance that we tried and implemented. This is our main contribution. 
-2. **train.py** : 
+2. **train.py** : 133 to 180, 
