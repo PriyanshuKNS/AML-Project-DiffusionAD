@@ -23,12 +23,9 @@ Here, version_number is one of {1,2,3,4}. We have tried 4 variation of norm-guid
 
 
 The files of interest and the changes made in them are listed below : 
-1. **models/DDPM.py** : The portion from line 388 to line 522 has been written by us. This portion deals with the different variations of One-step denoising process with Norm guidance that we tried and implemented. This is our main contribution. 
+1. **models/DDPM.py** : The portion from line 388 to line 522 has been written by us. This portion deals with the different variations of One-step denoising process with Norm guidance that we tried and implemented. This is our main contribution. The code is easy to understand. 
 2. **train.py** : train() function : 133 to 180,  eval() function : 264 to 312. The code was added to make it compatible with different versions that we are running.
 3. **eval.py** : In the testing() function, from 232 to 282 line number. Modified the testing according to the versions.
 
 
 Other than these additions shown above, few lines have been added here and there according to need.
-
-
-*Please refer to the report to look at the pseudocode for different versions of NOD.*
