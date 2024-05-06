@@ -1,5 +1,7 @@
 # AML-Project-DiffusionAD
 
+**Team Phoenix : Priyanshu Yadav (210050125), Anand Narasimhan (210051001)**
+
 This is the repository for our project "Diffusion Models in Anomaly Detection" by Team Phoenix. 
 
 Note: We haven't added the data directories are they are too large. 
