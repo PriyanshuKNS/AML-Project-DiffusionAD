@@ -21,5 +21,5 @@ Here, version_number is one of {1,2,3,4}. We have tried 4 variation of norm-guid
 
 
 The files of interest and the changes made in them are listed below : 
-1. models/DDPM.py : The portion from line  to line  has been written by us. The rest is taken from the author's repository. 
+1. models/DDPM.py : The portion from line 388 to line 522 has been written by us. This portion deals with the 
 2. 
