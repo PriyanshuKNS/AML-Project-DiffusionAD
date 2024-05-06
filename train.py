@@ -130,6 +130,8 @@ def train(training_dataset_loader, testing_dataset_loader, args, data_len,sub_cl
             anomaly_mask = sample["anomaly_mask"].to(device)
             anomaly_label = sample["has_anomaly"].to(device).squeeze()
 
+            ####################################################### INSERTED CODE ####################################################################
+                
             # noise_loss, pred_x0,normal_t,x_normal_t,x_noiser_t = ddpm_sample.norm_guided_one_step_denoising(unet_model, aug_image, anomaly_label,args)
             pred_mask = None 
             focal_loss = None
@@ -179,6 +181,7 @@ def train(training_dataset_loader, testing_dataset_loader, args, data_len,sub_cl
                 loss = noise_loss + 5*focal_loss + smL1_loss
                    
                 
+            ####################################################### END ####################################################################
             
             
             
@@ -257,7 +260,10 @@ def eval(testing_dataset_loader,args,unet_model,seg_model,data_len,sub_class,dev
         normal_t_tensor = torch.tensor([args["eval_normal_t"]], device=image.device).repeat(image.shape[0])
         noiser_t_tensor = torch.tensor([args["eval_noisier_t"]], device=image.device).repeat(image.shape[0])
         # loss,pred_x_0_condition,pred_x_0_normal,pred_x_0_noisier,x_normal_t,x_noiser_t,pred_x_t_noisier = ddpm_sample.norm_guided_one_step_denoising_eval(unet_model, image, normal_t_tensor,noiser_t_tensor,args)
+
+        ####################################################### INSERTED CODE ####################################################################
         
+            
         pred_x_0_condition = None
         # print("version type and value: ", type(version), version) 
         if version == 1:
@@ -300,6 +306,9 @@ def eval(testing_dataset_loader,args,unet_model,seg_model,data_len,sub_class,dev
             total_pixel_pred=np.append(total_pixel_pred,flatten_pred_mask)
             
             continue
+
+            ####################################################### END ####################################################################
+        
         
         pred_mask = seg_model(torch.cat((image, pred_x_0_condition), dim=1)) 
         out_mask = pred_mask
