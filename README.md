@@ -26,4 +26,7 @@ The files of interest and the changes made in them are listed below :
 3. **eval.py** : In the testing() function, from 232 to 282 line number. Modified the testing according to the versions.
 
 
+Other than these additions shown above, few lines have been added here and there according to need.
+
+
 *Please refer to the report to look at the pseudocode for different versions of NOD.*
